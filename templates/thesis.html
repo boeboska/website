@@ -1,0 +1,39 @@
+{% extends "index.html" %}
+
+{% block head %}
+    {{ super() }}
+
+{% endblock %}
+
+
+
+{% block line %}
+<body class="thesis_page">
+
+<h2> Transformer-based guidance of
+Self-Supervised depth estimation</h2>
+<img src="../static/imgs/html_imgs/thesis.gif">
+
+<h2> Abstract </h2>
+This is my master thesis at the UvA about self supervised depth estimation. The thesis was worth 48 EC.
+In the thesis we present a novel approach where a transformer model is combined with a
+self-supervised depth estimation model. Specifically, self-attention maps from an object
+detection transformer model are used for two loss functions. The first loss function tries to
+improve the depth estimation for objects further away in the scene. The depth estimation
+of these regions is difficult since objects further away from the camera are sparse. With
+this loss, we pay extra attention to these sparse objects. The second loss function tries
+to improve the depth estimation for transparent/reflective objects as this is a common
+difficulty in depth estimation. At last the architecture of a state-of-the-art self-supervised
+depth estimation model is updated where a part of the convolutional layers are replaced
+with a transformer block. This transformer block has a global receptive field and is
+beneficial for dense predictions like depth estimation.
+A Github repository is provided with code and instructions at
+ <a href="https://github.com/
+boeboska/depth_estimation_thesis/tree/main/monodepth2" target="_blank"> <b><u>this link</u>  </b></a>.
+<br>
+<br>
+<img src="../static/imgs/html_imgs/thesis_training.PNG" height="400">
+</body>
+{% endblock %}
+
+

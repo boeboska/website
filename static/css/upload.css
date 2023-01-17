@@ -1,0 +1,38 @@
+.upload_page #sidebar{
+    padding-bottom: 400px;
+}
+
+.upload_page{
+
+    background-color: #0a011c;
+    color: #dfe0f0;
+}
+
+#together{
+    display: inline;
+    clear: none;
+    background-color: black;
+    position: relative;
+    left: 20%;
+    bottom: 30%;
+}
+
+.upload_button{
+    background-color: #2661bf;
+    position: absolute;
+    color: white;
+    width: 100px;
+    height: 40px;
+
+}
+
+.upload_field{
+    border: 1px solid grey;
+}
+
+#title{
+    position: relative;
+    right: 6%;
+    padding-top: 70px;
+
+}

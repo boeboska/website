@@ -1,0 +1,21 @@
+.thesis_page #sidebar{
+    padding-bottom: 690px;
+}
+
+.thesis_page {
+    background-color: #0a011c;
+    color: #dfe0f0;
+}
+
+#thesis_gif{
+    position: relative;
+    right: 40px;
+}
+
+#thesis_button{
+    position: absolute;
+    top: 60px;
+    background-color: black;
+    width: 100px;
+    border: 1px solid white;
+}

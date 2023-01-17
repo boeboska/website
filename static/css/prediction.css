@@ -1,0 +1,47 @@
+.file-form{
+    padding-left: 20px;
+    padding-top: 20px;
+    padding-bottom: 40px;
+    font-size: 20px;
+}
+
+.upload_button_again{
+    font-size: 20px;
+    font-weight: bold;
+    background: #360205;
+
+}
+
+#block1 {
+
+    padding-bottom: 10px;
+}
+
+#block2 {
+    padding-top: 5px;
+    padding-bottom: 10px;
+}
+
+#block3 {
+    padding-top: 20px;
+}
+
+#block4 {
+
+}
+
+#feature_map_img {
+    width: 100%;
+}
+
+
+#prediction_img{
+    width: 105%;
+    height: 105%;
+}
+
+.prediction_page{
+
+    background-color: #0a011c;
+    color: #dfe0f0;
+}

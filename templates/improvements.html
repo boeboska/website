@@ -1,0 +1,28 @@
+{% extends "index.html" %}
+
+{% block head %}
+    {{ super() }}
+
+{% endblock %}
+
+{% block line %}
+<body class="improvements_page">
+<h2> Future improvements</h2>
+<br>
+As this neural network was only trained on a single dataset, the model does not perform well when it receives an image which is not visually close to the training dataset.
+Examples of this can be found on the model failures page. To improve the performance, some future improvements are set:
+<br>
+<br>
+<ul>
+    <li> The model should be trained on a more diverse dataset with more examples of vegtables in different scenes, shapes and sizes.</li>
+    <li> Transfer learning from imagenet: imagenet is a huge dataset containing more then 14 million images which are labelled. Convolutional
+    neural networks are trained on this dataset. It might be beneficial to start training on the vegatable dataset with the neurons from a trained neural
+    network on imagenet (transfer learning). This is a common trick in the computer vision research with good results. This might help the model perform
+    better since it has seen a lot of different vegatables in the image net dataset.</li>
+    <li> If the model prediction is too uncertain, due to not meeting the optimal upload criteria, this should be redirected to the user</li>
+
+
+
+</ul>
+</body>
+{% endblock %}

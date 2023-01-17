@@ -1,0 +1,78 @@
+#test{
+    background-image: url('../../static/imgs/html_imgs/test_1.jpg');
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+
+    background-size: 100% 100%;
+    height: 600px;
+    position: relative;
+}
+
+#bob_img{
+    position: absolute;
+    top: 80px;
+    left: 110px;
+    width: 300px;
+    height: 300px;
+
+
+}
+
+#text_hello{
+    position: absolute;
+    color: white;
+    left: 700px;
+    top: 200px;
+}
+
+#text_name{
+    position: absolute;
+    color: white;
+    left: 700px;
+    top: 220px;
+}
+
+
+#text_info{
+    position: absolute;
+    color: white;
+    left: 700px;
+    top: 299px;
+}
+
+#linkedin{
+    position: absolute;
+    left: 800px;
+    top: 499px;
+
+}
+
+#linkedin_img{
+    width: 40px;
+    height: 40px;
+}
+
+
+#github{
+    position: absolute;
+    left: 860px;
+    top: 499px;
+}
+
+#github_img{
+    width: 40px;
+    height: 40px;
+}
+
+#cv{
+    position: absolute;
+    left: 920px;
+    top: 499px;
+}
+
+#cv_img{
+    width: 40px;
+    height: 40px;
+}

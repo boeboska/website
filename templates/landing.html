@@ -1,0 +1,51 @@
+{% extends "index.html" %}
+
+{% block head %}
+    {{ super() }}
+<!--    <link rel="stylesheet" href="../static/css/index.css">-->
+{% endblock %}
+
+{% block line %}
+<div id="test">
+
+    <div id="text_hello">
+          <h4> Hello there, I am</h4>
+     </div>
+
+     <div id="text_name">
+          <h2> Bob Borsboom</h2>
+     </div>
+
+    <div id="text_info">
+          <h5> An experienced data scientist with a MSc in artificial intelligence</h5>
+     </div>
+
+    <div id="bob_img">
+        <img src="../../static/imgs/html_imgs/bob.png" id="bob_img">
+    </div>
+
+    <div id="linkedin">
+        <a href="https://www.linkedin.com/in/bob-borsboom-08049412a/" target="_blank">
+            <img src="../../static/imgs/html_imgs/linked_in_icon.png" id="linkedin_img">
+        </a>
+    </div>
+
+    <div id="github">
+        <a href="https://github.com/boeboska" target="_blank">
+            <img src="../../static/imgs/html_imgs/github_4.png" id="github_img">
+        </a>
+    </div>
+
+    <div id="cv">
+        <a href="../../static/imgs/html_imgs/cv_bob_borsboom.pdf" download>
+        <img src="../../static/imgs/html_imgs/cv_icon.png" id="cv_img">
+    </div>
+
+
+
+
+     </div>
+<!--style="background-image: url('../static/imgs/html_imgs/background_landing.png'); height: 1000px; width: 400px;"> <h2> ALALALA</h2></div>-->
+
+
+{% endblock %}

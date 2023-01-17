@@ -1,0 +1,61 @@
+{% extends "index.html" %}
+
+{% block head %}
+    {{ super() }}
+
+{% endblock %}
+
+{% block line %}
+<body class="model_fail_page">
+    <h2>Model failures</h2>
+
+    To have an understanding of the models' capabilities, it will be tested on several vegetable images which lie outside the dataset.
+    This will give an indication of how robust the model is and how it will respond to images it has never seen.
+    <br>
+    One of the disadvantages of the vegetable dataset is that the vegetable images are visually quite similar within their class.
+    This means that the images of carrots are all similar. Feeding this to a neural network means that the network will be good at recognizing
+    carrots which are part of the dataset, as can be seen on the training statistics page. But the disadvantage of feeding it images of carrots
+    it has not seen during training is that the model will not recognize them. This phenomenon will be shown in the example below.
+    Possible solutions are given on the future improvement page.
+
+    <br>
+    <br>
+    <h3> Carrot</h3>
+    <img src="../../static/imgs/html_imgs/carrots.png" id="carrots">
+    <br>
+    The image above gives an idea of the carrot vegetable images which are part of the dataset. As can be seen, the carrots are all of the same size,
+    the same shape and the same color. The model will probably be good at recognizing carrot images that are similar as in the example below but
+    it will fail when we feed it carrot images with carrots of different shapes, colors and size. This will be illustrated in an example.
+    <br>
+    The two carrot images below will be fed to the model. The left image is visually close to the dataset, but the right image is not.
+    It is interesting to see how the model will respond to these examples.
+    <br>
+    <img src="../../static/imgs/html_imgs/carrot_examples.PNG" id="carrots_examples" width="450", height="140">
+    <br>
+    <ul>
+        <li> <u>Left image prediction:</u> below it can be seen that the model is correct in predicting the left carrot image. It has 60% certainty that this
+    image is a carrot. This can be explained due to the fact that the carrot image is close to the carrot images in the training dataset in terms of
+    color, size and shape. One of the reasons why the model is not 100% certain could be due to the fact that this image is of a different shape.
+    One of the disadvantages of convolutional neural networks is that it can only predict images that have the same shape as the training images.
+    Therefore this image of shape 1600 x 900 is first reshaped to 224 x 224 (the training images shape).
+    This reduces the quality of the image and its information and therefore also the model prediction.</li>
+        <li>
+            <u> right image prediction:</u> the model is predicting with 71% certainty that the vegetables in the images are radish. This is a mistake.
+            As explained before, this will come due to the fact that the model has not seen such carrot images during training. Also, the image is of shape
+            2400 x 1600 which is much higher than the training shape.
+            When looking at the radish images from the dataset below, it could be declared why the model is predicting radish, as the carrot image has some
+            visual similarities with the radish images.
+        </li>
+    </ul>
+
+    <img src="../../static/imgs/html_imgs/model_prediction_carrot.PNG" id="model_prediction_carrot" width="850", height="340">
+    <h5>Example of radish images from the dataset</h5>
+    <img src="../../static/imgs/html_imgs/radishs.png" id="radishs">
+
+
+    <br>
+    <br>
+
+
+</body>
+{% endblock %}

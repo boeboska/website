@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        {% block head %}
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <title>{% block title %} {% endblock %} Portfolio Bob Borsboom</title>
+
+         <!-- Bootstrap CSS CDN -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <!-- Our Custom CSS -->
+        <link rel="stylesheet" href="../static/css/index.css">
+        <link rel="stylesheet" href="../static/css/prediction.css">
+        <link rel="stylesheet" href="../static/css/model.css">
+        <link rel="stylesheet" href="../static/css/upload.css">
+        <link rel="stylesheet" href="../static/css/landing.css">
+        <link rel="stylesheet" href="../static/css/thesis.css">
+        <link rel="stylesheet" href="../static/css/improvements.css">
+        <link rel="stylesheet" href="../static/css/advent.css">
+        <link rel="stylesheet" href="../static/css/contact.css">
+        <link rel="stylesheet" href="../static/css/model_fail.css">
+
+
+        {% endblock %}
+    </head>
+    <body>
+
+        <div class="wrapper">
+            <!-- Sidebar Holder -->
+            <nav id="sidebar">
+                <div class="sidebar-header">
+                    <h3>Portfolio Bob Borsboom</h3>
+                    <strong>BB</strong>
+                </div>
+
+                <ul class="list-unstyled components">
+                    <li>
+                        <a href="{{ url_for('landing') }}">
+                            <div id="landing">
+
+
+<!--                                <input type="button" class="glyphicon glyphicon-home" id="button" value = "button" onclick="setColor('button')";/>-->
+
+                                <i class="glyphicon glyphicon-home"> </i>
+                                Home
+
+                            </div>
+                        </a>
+
+                    </li>
+
+
+                    <li class="activee">
+                        <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">
+<!--                            <i class="glyphicon glyphicon-home"></i>-->
+                            <i class="glyphicon glyphicon-search"></i>
+                            Vegatable recognizer
+                        </a>
+                        <ul class="collapse list-unstyled" id="homeSubmenu">
+
+                            <a href="{{ url_for('uploads') }}">
+                                <li id="home_1">
+
+<!--                                <div id="home_1">-->
+                                    Try it out
+<!--                                </div>-->
+                                </li>
+                            </a>
+
+                            <a href="{{ url_for('model') }}">
+                                <li id="home_2">
+<!--                                <div id="home_2">-->
+                                    Model training & architecture
+                                </li>
+                            </a>
+
+                            <a href="{{ url_for('model_fail') }}">
+                                <li id="model_fail">
+                                    Model failures
+                                </li>
+                            </a>
+
+
+                            <a href="{{ url_for('improvements') }}">
+                                <li id="home_3">
+                                    Future improvements
+                                </li>
+                            </a>
+                        </ul>
+                       </li>
+                    <li>
+                        <a href="{{ url_for('thesis') }}">
+                            <div id="earphone">
+                                <i class="glyphicon glyphicon-book"></i>
+                                MSc thesis self-supervised depth estimation
+                            </div>
+                        </a>
+
+                    </li>
+                    <li>
+                        <a href="{{ url_for('advent') }}">
+
+                          <div id="advent">
+                            <i class="glyphicon glyphicon-certificate"></i>
+
+                            Advent of code 2022
+
+                          </div>
+                        </a>
+
+                    </li>
+                    <li>
+                        <a href="{{ url_for('contact') }}">
+                        <div id="contact">
+                            <i class="glyphicon glyphicon-send"></i>
+                            About me
+                        </div>
+                        </a>
+                    </li>
+                </ul>
+
+            </nav>
+
+            <!-- Page Content Holder -->
+            <div id="content">
+
+                <nav class="navbar navbar-default">
+                    <div class="container-fluid">
+
+                        <div class="navbar-header">
+                            <button type="button" id="sidebarCollapse" class="btn btn-info navbar-btn">
+                                <i class="glyphicon glyphicon-align-left"></i>
+                                <span>Toggle Sidebar</span>
+                            </button>
+                        </div>
+                    </div>
+                </nav>
+
+
+
+                <div class="line">
+                    {% block line %}
+                    <h2>Collapsible Sidebar Using Bootstrap 3</h2>
+                    HOME
+                    {% endblock %}
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+        <!-- jQuery CDN -->
+         <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+         <!-- Bootstrap Js CDN -->
+         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+         <script class="jsbin" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+
+         <script type="text/javascript">
+             $(document).ready(function () {
+                 $('#sidebarCollapse').on('click', function () {
+                     $('#sidebar').toggleClass('active');
+                 });
+             });
+
+
+         </script>
+
+
+
+
+    </body>
+</html>

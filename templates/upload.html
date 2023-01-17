@@ -1,0 +1,82 @@
+{% extends "index.html" %}
+{% block head %}
+  {{ super() }}
+{% endblock %}
+
+{% block line %}
+<body class="upload_page">
+<!--    <body>-->
+
+<!--    <div class = "line">-->
+<div class="container">
+
+  <div class="row ">
+
+    <div class="col-md-6">
+        <div id="title">
+        <h2> How to use </h2>
+        </div>
+
+    </div>
+
+
+    <div class="col-md-6">
+        <div class="upload_field">
+            <div class = "upload-file">
+            <form class= "file-form" action="/uploads_pressed" method="post" enctype="multipart/form-data">
+                <input class="file-form-input" type="file", name="file"/>
+                    <button class="upload_button"> <h4>Upload</h4></button>
+            </form>
+            </div>
+
+        <div class="header-content-sub">
+
+            <p style ="text-align: center; margin-top: 15px; color:red" class="header-content-info">{{error}}</p>
+
+        </div>
+        </div>
+    </div>
+
+  </div>
+</div>
+
+    Upload an image of a vegatable and let the vegtable recognizer recognize the vegatable.
+    <br>
+    <br>
+    The vegatable recognizer is trained on the vegatable image dataset, and can be found<a href="https://www.kaggle.com/datasets/misrakahmed/vegetable-image-dataset" target="_blank"> <b><u>here</u> </b></a>.
+    The dataset contains 15 vegatables:
+    <ul>
+    <li> Bean</li>
+    <li> Bitter Gourd </li>
+    <li> Bottle Gourd </li>
+    <li> Brinjal </li>
+    <li> Broccoli </li>
+    <li> Cabbage </li>
+    <li> Capsicum </li>
+    <li> Carrot </li>
+    <li> Cauliflower </li>
+    <li> Cucumber </li>
+    <li> Papaya </li>
+    <li> Potato </li>
+    <li> Pumpkin </li>
+    <li> Radish </li>
+    <li> Tomato </li>
+    </ul>
+
+    <br>
+
+    <h4> Optimal performance criteria</h4>
+    As this neural network is trained on a specific dataset, the performance of the model will be optimal if the uploaded images are similar to the dataset. As the dataset is not too diverse, the following critera are important:
+    <li> The image should contain only one specie of vegatable from the list above </li>
+    <li> Image size should roughly be 224 x 224</li>
+
+    <br>
+    If the uploaded image does not meet the criteria, it is likely that the model will predict the incorrect vegatable. In order to improve the model performance, a more diverse dataset must be added. More future improvements can be found on the future improvements page.
+
+
+</body>
+{% endblock %}
+<!--    </div>-->
+<!--    </body>-->
+
+<!--</html>-->

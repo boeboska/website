@@ -1,0 +1,61 @@
+{% extends "index.html" %}
+{% block head %}
+  {{ super() }}
+{% endblock %}
+
+{% block line %}
+
+<body class="prediction_page">
+
+        <div class="container">
+            <div class="row ">
+
+
+                <div class="col-md-6" id="block1">
+                    <div class = "upload-file">
+
+                    <form class= "file-form" action="/uploads" method="post" enctype="multipart/form-data">
+
+<!--                <input class="file-form-input" type="file", name="file"/>-->
+
+                        <button class="upload_button_again"> <u> Try different vegatable </u></button>
+                        <br>
+                        <br>
+                        <h4>Read <u> <a href="{{ url_for('model') }}">   here</u> </a> more about the model architecture and the explanation about the feature maps</h4>
+                    </form>
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-6" id="block2">
+
+                    <img src= "static/imgs/uploads/{{uploaded_img}}" height="250" width="250">
+                </div>
+
+            </div>
+
+            <div class="row ">
+
+
+                <div class="col-md-6" id="block3">
+
+                    <img src= "static/imgs/model_prediction/model_prediction_{{model_prediction_name}}.png" id="prediction_img">
+
+                </div>
+
+
+                <div class="col-md-6" id="block4">
+
+                     <img src= "static/imgs/feature_maps/{{feature_maps}}.png" id="feature_map_img">
+
+                </div>
+
+            </div>
+
+
+
+        </div>
+</body>
+{% endblock %}
+
