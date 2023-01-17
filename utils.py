@@ -83,8 +83,8 @@ def plot_model_prediction(prediction: List[float], file: str):
     ax.spines['right'].set_color('#dddddd')
     ax.spines['left'].set_color('#dddddd')
 
-
-    classes = os.listdir('vegatable_data/train/')
+    classes = ['Bean', 'Bitter Gourd', 'Bottle Gourd', 'Brinjal', 'Broccoli', 'Cabbage', 'Capsicum', 'Carrot', 'Cauliflower',
+     'Cucumber', 'Papaya', 'Potato', 'Pumpkin', 'Radish', 'Tomato']
 
     for list_position, name in enumerate(classes):
         if "_" in name:
