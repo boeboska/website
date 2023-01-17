@@ -1,0 +1,6 @@
+/vegatable_data
+/training_stats
+/jupyter notebook
+/.ipynb_checkpoints
+/__pychage__
+*.pth
