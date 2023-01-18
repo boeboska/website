@@ -41,7 +41,6 @@ def generate_feature_maps(model, file: str):
         pyplot.subplot(3, 4, position)
 
         pyplot.imshow(feature_map[0][position -1], cmap='viridis')
-        pyplot.imshow(feature_map[0][position -1], cmap='viridis')
         pyplot.axis("off")
 
     # decrease space between subplots
@@ -50,6 +49,7 @@ def generate_feature_maps(model, file: str):
     fig.savefig('static/imgs/feature_maps/{}.png'.format(file.split(".")[0]))
 
 def get_probability(model, file: str) -> List[float]:
+    "given the uploaded image, get the model prediction per class"
 
     softmax = nn.Softmax()
 
@@ -105,7 +105,6 @@ def plot_model_prediction(prediction: List[float], file: str):
 
     # plot probability values in figure
     for i, value in enumerate(prediction):
-        print(i, value)
         if value > 0.95:
             plt.text(s=round(value, 2), x=i - 0.28, y=value - 0.03, size=20, color='white')
         else:
