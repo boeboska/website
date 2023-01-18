@@ -28,7 +28,6 @@ def load_model():
 
     return model
 
-
 @app.route('/', methods=['GET', 'POST'])
 def landing():
     return render_template('landing.html')
@@ -36,7 +35,6 @@ def landing():
 @app.route('/', methods=['GET', 'POST'])
 def home():
     return render_template('index.html')
-
 
 @app.route('/model', methods=['GET', 'POST'])
 def model():
