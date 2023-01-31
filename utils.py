@@ -63,7 +63,7 @@ def get_probability(model, file: str) -> List[float]:
     img_tensor = img_tensor.unsqueeze(0).float()
 
     prediction = model(img_tensor)
-    prediction = torch.round(softmax(prediction), decimals = 3)
+    prediction = torch.round(softmax(prediction), decimals = 4)
     prediction = prediction.squeeze(0).cpu().detach().numpy().tolist()
 
     return prediction
