@@ -2,7 +2,7 @@
 
 On this page you can read the steps on how to run the website, how to download the dataset and how to train your own model.
 
-
+![image info](static/imgs/html_imgs/landing.PNG)
 ## Run the website
 
 Prerequisites:
